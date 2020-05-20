@@ -41,7 +41,6 @@ public class FileExplorer {
 		shell = createShell(display);
 		createContents(shell);
 		
-//		shell.pack();
 		shell.open();
 	
 		while (!shell.isDisposed()) {
@@ -81,7 +80,7 @@ public class FileExplorer {
 		currentDirLabel.setLeftMargin(15);
 		
 		TreeViewer treeViewer = new TreeViewer(explorer);
-		Text fileContent = new Text(explorer, SWT.MULTI | SWT.BORDER | SWT.V_SCROLL);	
+		Text fileContent = new Text(explorer, SWT.MULTI | SWT.BORDER | SWT.V_SCROLL | SWT.H_SCROLL);	
 		
 		treeViewer.getTree().setLayoutData(fillGrid);
 		fileContent.setLayoutData(fillGrid);
